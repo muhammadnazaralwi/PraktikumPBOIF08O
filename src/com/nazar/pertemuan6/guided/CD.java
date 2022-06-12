@@ -20,10 +20,10 @@ public class CD {
     public long getHargaCD() {
         return hargaCD;
     }
-    
+
     public void cetakCD() {
-        System.out.println("Ukuran CD: " + ukuran);
-        System.out.println("Harga CD: " + hargaCD);
+        System.out.println("Ukuran CD : "+ukuran);
+        System.out.println("Harga CD : Rp "+hargaCD);
         System.out.println();
     }
 }
