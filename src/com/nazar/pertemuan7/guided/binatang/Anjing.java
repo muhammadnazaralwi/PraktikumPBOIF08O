@@ -2,22 +2,22 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.nazar.pertemuan7.guided.Binatang;
+package com.nazar.pertemuan7.guided.binatang;
 
 /**
  *
  * @author Irfan
  */
-public class Kucing extends Binatang{
+public class Anjing extends Binatang{
     private String nama;
 
-    public Kucing(String nama) {
-        super("Kucing");
+    public Anjing(String nama) {
+        super("Anjing");
         this.nama = nama;
     }
     
     public void suara(){
-        System.out.println("Mengeong");
+        System.out.println("Mengonggong");
     }
     
     public String toString(){
