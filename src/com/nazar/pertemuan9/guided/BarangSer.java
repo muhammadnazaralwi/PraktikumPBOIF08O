@@ -9,21 +9,18 @@ import java.io.*;
  * @author lab
  */
 class BarangSer implements Serializable {
-        private String nama;
-        private int jumlah;
-        
-        public BarangSer(String nm, int jmlh){
-            nama = nm;
-            jmlh = jumlah;
-        }
-        
-        public void tampil(){
-            System.out.println("Nama Barang : " + nama);
-            System.out.println("Jumlah Barang : " + jumlah);
-        }
+    private String nama;
+    private int jumlah;
+
+    public BarangSer(String nm, int jmlh){
+        nama = nm;
+        jmlh = jumlah;
     }
 
-public class objectSerialization {
+    public void tampil(){
+        System.out.println("Nama Barang : " + nama);
+        System.out.println("Jumlah Barang : " + jumlah);
+    }
     
     public void simpanObject(BarangSer ob){
         try {
@@ -41,8 +38,9 @@ public class objectSerialization {
             FileInputStream fis = new FileInputStream("dataBarang.txt");
             ObjectInputStream ois = new ObjectInputStream(fis);
             
-            while ((obb = (BarangSer)ois.readObject())!=null);
-            obb.tampil();
+            while ((obb = (BarangSer)ois.readObject())!=null) {
+                obb.tampil();
+            }
         } catch (IOException ioe) {
             System.exit(1);
         } catch (Exception e){
@@ -52,5 +50,7 @@ public class objectSerialization {
     
     public static void main(String[] args) {
         BarangSer a1 = new BarangSer("Motor",5);
+        a1.simpanObject(a1);
+        a1.bacaObject(a1);
     }
 }
